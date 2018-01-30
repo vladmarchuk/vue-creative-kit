@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+  <title>Starter Kit</title>
+  <meta name="msapplication-TileColor" content="#2d89ef">
+  <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <!-- Google Tag Manager -->
+  <script>
+    var host = window.location.hostname;
+    if(host != "localhost")
+    {
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+          'gtm.start':
+            new Date().getTime(), event: 'gtm.js'
+        });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', '%ID%');
+    }
+  </script>
+  <!-- End Google Tag Manager -->
+
+
+  <script>
+    // //detect phantomjs
+    var isElecton = window.navigator.userAgent.indexOf('Electron') > -1;
+    var isSSR = /PhantomJS/.test(window.navigator.userAgent)
+    window.OLD_BROWSER_REDIRECT_LINK = './static/old-browser.html';
+  </script>
+  <!--[if gte IE 9]>
+  <script>
+    window.location.href = window.OLD_BROWSER_REDIRECT_LINK;
+  </script>
+  <!--<![endif]-->
+  <script>
+    // https://browser-update.org/
+    var $buoop = {
+      vs: { i: 10, f: -4, o: -4, s: 8, c: -4 },       // Specifies browser versions to notify. Negative numbers specify how much versions behind current version to notify.
+      reminder: 0,                                    // after how many hours should the message reappear
+      onshow: function (infos) {
+        window.location.href = window.OLD_BROWSER_REDIRECT_LINK; // to test add '#test-bu' to the link
+      },
+      test: false,                                    // true = always show the bar (for testing)
+      text_xx: '',                                    // custom notification text for language "xx"
+      newwindow: true,                                // open link in new window/tab
+      url: null,                                      // the url to go to after clicking the notification
+      nomessage: false,                               // Do not show a message if the browser is out of date, just call the onshow callback function
+      api: 4,                                         // This is the version of the browser-update api to use. Please do not remove.
+    };
+
+    function $buo_f() {
+      var e = document.createElement('script');
+      e.src = '//browser-update.org/update.min.js';
+      document.body.appendChild(e);
+    }
+
+    if (!isSSR && !isElecton) {
+      try {
+        document.addEventListener('DOMContentLoaded', $buo_f, false);
+      }
+      catch (e) {
+        window.attachEvent('onload', $buo_f);
+      }
+    }
+  </script>
+
+</head>
+
+<body>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+  <iframe src="https://www.googletagmanager.com/ns.html?id=%ID%" height="0" width="0"
+          style="display:none;visibility:hidden"></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div id="app"></div>
+<!-- built files will be auto injected -->
+</body>
+
+</html>

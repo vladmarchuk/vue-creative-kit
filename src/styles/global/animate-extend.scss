@@ -1,0 +1,119 @@
+
+@keyframes flipOutToLeftY {
+  0% {
+    transform: perspective(400px)
+  }
+  30% {
+    transform: perspective(400px) rotateY(15deg);
+    opacity: 1
+  }
+  to {
+    transform: perspective(400px) rotateY(-90deg);
+    opacity: 0
+  }
+}
+
+.flipOutToLeftY {
+  -webkit-backface-visibility: visible !important;
+  backface-visibility: visible !important;
+  animation-name: flipOutToLeftY
+}
+
+
+.animated.flipOutToLeftY {
+  animation-duration: .75s
+}
+
+
+.animated.animation-delay-100 {
+  animation-delay: 100ms;
+}
+.animated.animation-delay-200 {
+  animation-delay: 200ms;
+}
+.animated.animation-delay-300 {
+  animation-delay: 300ms;
+}
+.animated.animation-delay-400 {
+  animation-delay: 400ms;
+}
+.animated.animation-delay-500 {
+  animation-delay: 500ms;
+}
+.animated.animation-delay-600 {
+  animation-delay: 600ms;
+}
+.animated.animation-delay-700 {
+  animation-delay: 700ms;
+}
+.animated.animation-delay-800 {
+  animation-delay: 800ms;
+}
+.animated.animation-delay-900 {
+  animation-delay: 900ms;
+}
+.animated.animation-delay-1000 {
+  animation-delay: 1000ms;
+}
+
+
+.animated.animation-duration-100 {
+  animation-duration: 100ms;
+}
+.animated.animation-duration-200 {
+  animation-duration: 200ms;
+}
+.animated.animation-duration-300 {
+  animation-duration: 300ms;
+}
+.animated.animation-duration-400 {
+  animation-duration: 400ms;
+}
+.animated.animation-duration-500 {
+  animation-duration: 500ms;
+}
+.animated.animation-duration-600 {
+  animation-duration: 600ms;
+}
+.animated.animation-duration-700 {
+  animation-duration: 700ms;
+}
+.animated.animation-duration-800 {
+  animation-duration: 800ms;
+}
+.animated.animation-duration-900 {
+  animation-duration: 900ms;
+}
+.animated.animation-duration-1000 {
+  animation-duration: 1000ms;
+}
+.animated.animation-duration-1100 {
+  animation-duration: 1100ms;
+}
+.animated.animation-duration-1200 {
+  animation-duration: 1200ms;
+}
+.animated.animation-duration-1300 {
+  animation-duration: 1300ms;
+}
+.animated.animation-duration-1400 {
+  animation-duration: 1400ms;
+}
+.animated.animation-duration-1500 {
+  animation-duration: 1500ms;
+}
+.animated.animation-duration-1600 {
+  animation-duration: 1600ms;
+}
+.animated.animation-duration-1700 {
+  animation-duration: 1700ms;
+}
+.animated.animation-duration-1800 {
+  animation-duration: 1800ms;
+}
+.animated.animation-duration-1900 {
+  animation-duration: 1900ms;
+}
+.animated.animation-duration-2000 {
+  animation-duration: 2000ms;
+}

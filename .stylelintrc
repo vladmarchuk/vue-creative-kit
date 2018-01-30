@@ -1,0 +1,25 @@
+{
+  "processors": ["stylelint-processor-html"],
+  "extends": [
+    "stylelint-config-standard"
+  ],
+  "plugins": [
+    "stylelint-selector-bem-pattern"
+  ],
+  "rules": {
+    "selector-max-compound-selectors": 3,
+    "max-nesting-depth": 3,
+    "no-duplicate-selectors": true,
+    "selector-max-id": 0,
+    "color-hex-length": 0,
+    "selector-no-vendor-prefix": true,
+    "selector-pseudo-element-colon-notation": "single",
+    "no-empty-source": null,
+      "plugin/selector-bem-pattern": {
+        "componentName": "(([a-z0-9]+(?!-$)-?)+)",
+        "componentSelectors": {
+          "initial": "\\.{componentName}(((__|--)(([a-z0-9\\[\\]'=]+(?!-$)-?)+))+)?$"
+        }
+    }
+  }
+}

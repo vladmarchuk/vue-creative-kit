@@ -1,0 +1,164 @@
+<div class="b-content-popup">
+
+  <transition enter-active-class="animated fadeInDown animation-duration-200"
+              leave-active-class="animated fadeOutDown animation-duration-200">
+    <div class="popup-wrapper"
+         v-if="isPopupOpen">
+      <div class="popup-wrapper__overlay"></div>
+      <span class="popup-wrapper__close-btn"
+            v-on:click="closePopup()"></span>
+
+      <div class="popup-wrapper__scroll">
+        <div class="vuebar-scroll-content">
+          <div class="popup-wrapper__content">
+
+            <div class="popup-wrap" v-if="$route.query.popup === 'pacific-study'">
+              <h2 class="h2">
+                PACIFIC STUDY
+              </h2>
+
+              <h3 class="h3">
+                Key Inclusion Criteria<sup>2</sup>
+              </h3>
+
+              <ul class="list list--ul">
+                <li class="list__item">
+                  <span class="list__item-text">
+                    18 years of age or older
+                  </span>
+                </li>
+                <li class="list__item">
+                  <span class="list__item-text">
+                    WHO performance status ≤1
+                  </span>
+                </li>
+                <li class="list__item">
+                  <span class="list__item-text">
+                    Life expectancy ≥12 weeks
+                  </span>
+                </li>
+                <li class="list__item">
+                  <span class="list__item-text">
+                    Recent (≤3 months) tumor biopsy and archived tumor tissue block
+                  </span>
+                </li>
+              </ul>
+<br>
+              <h3 class="h3">
+                Key Exclusion Criteria<sup>2</sup>
+              </h3>
+
+              <ul class="list list--ul">
+                <li class="list__item">
+                  <span class="list__item-text">
+                    Any unresolved prior toxicity of CTCAE >Grade 2
+                  </span>
+                </li>
+                <li class="list__item">
+                  <span class="list__item-text">
+                    Any prior ≥Grade 3 imAE, or any unresolved imAE >Grade 1
+                  </span>
+                </li>
+                <li class="list__item">
+                  <span class="list__item-text">
+                    Patients with ≥Grade 2 pneumonitis from prior chemoradiation therapy
+                  </span>
+                </li>
+                <li class="list__item">
+                  <span class="list__item-text">
+                    Active or prior autoimmune disease requiring systemic treatment or inflammatory bowel disease
+                  </span>
+                </li>
+                <li class="list__item">
+                  <span class="list__item-text">
+                    History of immunodeficiency, allogeneic organ transplant, or tuberculosis
+                  </span>
+                </li>
+                <li class="list__item">
+                  <span class="list__item-text">
+                    Current or prior use of immunosuppressive medication within 28 days before the first dose
+                  </span>
+                </li>
+                <li class="list__item">
+                  <span class="list__item-text">
+Uncontrolled intercurrent illness
+                  </span>
+                </li>
+                <li class="list__item">
+                  <span class="list__item-text">
+Prior exposure to any anti-PD-1 or anti-PD-L1 antibody
+                  </span>
+                </li>
+              </ul>
+
+              <div class="footnote">
+                <p class="footnote__item">
+                  anti-PD-1: anti programmed death-1; anti-PD-L1: anti-programmed death ligand-1; CTCAE: Common
+                  Terminology Criteria for Adverse Events; imAE: immune-mediated AEs.
+                </p>
+              </div>
+
+              <h2 class="h2">
+                References
+              </h2>
+
+              <ol class="list list--ol">
+                <li class="list__item">
+                  <span class="list__item-text">
+                    IMFINZI [package insert]. Wilmington, DE: AstraZeneca Pharmaceuticals LP; 2017.
+                  </span>
+                </li>
+                <li class="list__item">
+                  <span class="list__item-text">
+                    Antonia SJ, Villegas A, Daniel D, et al. Durvalumab after chemoradiotherapy in stage III non–small-cell lung cancer [published online ahead of print September 8, 2017]. N Engl J Med. doi:10.1056/NEJMoa1709937.
+                  </span>
+                </li>
+                <li class="list__item">
+                  <span class="list__item-text">
+                    Hanna N, Neubauer M, Yiannoutsos C, et al. Phase III study of cisplatin, etoposide, and concurrent chest radiation with or without consolidation docetaxel in patients with inoperable stage III non-small-cell lung cancer: the Hoosier Oncology Group and U.S. Oncology. J Clin Oncol. 2008;26(35):5755-5760.
+                  </span>
+                </li>
+              </ol>
+
+            </div>
+
+            <div class="popup-wrap" v-if="$route.query.popup === 'median-benefit'">
+              <h3 class="h3">IMFINZI provided a consistent median PFS benefit across patient types<sup>*</sup></h3>
+
+              <!--<table-animation>-->
+                <!--<div class="table desktop-only">-->
+                  <!--<table-suzanne class="table-svg"></table-suzanne>-->
+                <!--</div>-->
+              <!--</table-animation>-->
+
+              <div class="table-block table-block--image desktop-only">
+                <table-suzanne class="table-svg"></table-suzanne>
+              </div>
+
+              <div class="table-scroll mobile-only">
+                <div class="table-scroll__wrap">
+                  <!--<img class="table-image" src="./assets/table-1.svg"/>-->
+                  <table-suzanne class="table-image"></table-suzanne>
+                </div>
+              </div>
+
+              <div class="footnote">
+                <p class="footnote__item footnote__item--sup"><sup class="footnote__sup">*</sup>In patients with locally
+                  advanced, unresectable NSCLC whose disease has not progressed following platinum-based CRT.</p>
+                <p class="footnote__item footnote__item--sup"><sup class="footnote__sup">†</sup>The hazard ratio and 95%
+                  confidence interval were not calculated for the complete response because this subgroup had fewer than 20
+                  events.</p>
+                <p class="footnote__item footnote__item--sup"><sup class="footnote__sup">‡</sup>PD-L1 status was
+                  retrospectively analyzed using the Ventana<sup>®</sup> PD-L1 (SP263) Assay in 451 patients with available
+                  samples taken prior to concurrent CRT.</p>
+                <p class="footnote__item footnote__item--sup"><sup class="footnote__sup">§</sup>EGFR mutation testing in 523
+                  patients with available samples taken prior to concurrent CRT.</p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </transition>
+</div>

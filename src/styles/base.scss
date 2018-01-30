@@ -1,0 +1,32 @@
+body,
+html {
+  background-color: $color-blue;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+body {
+  font-size: 16px;
+  line-height: 1.31em;
+  color: $color-body;
+}
+
+a {
+  text-decoration: underline;
+  transition: color 0.3s;
+  color: $color-link;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+sup {
+  font-size: 65%;
+  line-height: 0;
+  vertical-align: 7px;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
